@@ -468,9 +468,12 @@ function addon:PLAYER_REGEN_ENABLED()
   self:UnregisterEvent("PLAYER_REGEN_ENABLED")
 end
 
+local lastcastguid
 function addon:UNIT_SPELLCAST_SUCCEEDED(event, ...)
   local unit, castguid, spellId = ...
   if not _p.spell_data[spellId] then return end
+  if lastcastguid and (castguid == lastcastguid) then return end
+  lastcastguid = castguid
   local marker_desc = _G["WORLD_MARKER".._p.spell_data[spellId]]
   local eClass,classID = unit and UnitClassBase(unit)
   local classColor = classColors[eClass]

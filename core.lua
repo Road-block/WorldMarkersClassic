@@ -18,6 +18,9 @@ local WORLD_MARKER_ORDER = {
   [3] = 3,
   [4] = 7,
   [5] = 1,
+  [6] = 2,
+  [7] = 5,
+  [8] = 8,
 }
 local NUM_WORLD_MARKERS = #WORLD_MARKER_ORDER
 local classColors = (_G.CUSTOM_CLASS_COLORS or _G.RAID_CLASS_COLORS)
@@ -39,6 +42,9 @@ _p.spell_data = {
   [84998] = 3,
   [84999] = 4,
   [85000] = 5,
+  [171555] = 6, -- circle
+  [171556] = 7, -- moon
+  [171557] = 8, -- skull
 }
 _p.defaults = {
   global = {

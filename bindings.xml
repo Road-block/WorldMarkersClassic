@@ -9,6 +9,12 @@
   <Binding name="CLICK WorldMarkerClassicBindButton4:RightButton" category="BINDING_HEADER_WORLDMARKERSCLASSIC"/>
   <Binding name="CLICK WorldMarkerClassicBindButton5:LeftButton" category="BINDING_HEADER_WORLDMARKERSCLASSIC"/>
   <Binding name="CLICK WorldMarkerClassicBindButton5:RightButton" category="BINDING_HEADER_WORLDMARKERSCLASSIC"/>
+  <Binding name="CLICK WorldMarkerClassicBindButton6:LeftButton" category="BINDING_HEADER_WORLDMARKERSCLASSIC"/>
+  <Binding name="CLICK WorldMarkerClassicBindButton6:RightButton" category="BINDING_HEADER_WORLDMARKERSCLASSIC"/>
+  <Binding name="CLICK WorldMarkerClassicBindButton7:LeftButton" category="BINDING_HEADER_WORLDMARKERSCLASSIC"/>
+  <Binding name="CLICK WorldMarkerClassicBindButton7:RightButton" category="BINDING_HEADER_WORLDMARKERSCLASSIC"/>
+  <Binding name="CLICK WorldMarkerClassicBindButton8:LeftButton" category="BINDING_HEADER_WORLDMARKERSCLASSIC"/>
+  <Binding name="CLICK WorldMarkerClassicBindButton8:RightButton" category="BINDING_HEADER_WORLDMARKERSCLASSIC"/>
   <Binding name="CLICK WorldMarkerClassicBindButtonMulti:LeftButton" category="BINDING_HEADER_WORLDMARKERSCLASSIC"/>
   <Binding name="CLICK WorldMarkerClassicBindButtonClear:LeftButton" category="BINDING_HEADER_WORLDMARKERSCLASSIC"/>
 </Bindings>

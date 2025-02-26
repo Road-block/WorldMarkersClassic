@@ -54,6 +54,7 @@ _p.defaults = {
   profile = {
     btnSize = 26,
     border = 4,
+    backdrop = 1,
     orientation = "VERTICAL",
     snitch = true,
     point = "LEFT",
@@ -133,6 +134,13 @@ function addon:createUI()
       end
       self.bg:SetPoint("TOPLEFT", border,-border)
       self.bg:SetPoint("BOTTOMRIGHT",-border, border)
+      local bg_alpha = addon.db.profile.backdrop or 1.0
+      self.bg:SetColorTexture(0,0,0,bg_alpha)
+      if addon.db.global.lock then
+        self.border:SetColorTexture(0,0,0,bg_alpha)
+      else
+        self.border:SetColorTexture(0,1,0,0.5)
+      end
       self:SetSize(bar_width, bar_height)
       self:ClearAllPoints()
       self:SetPoint(addon.db.profile.point, UIParent, addon.db.profile.relPoint, addon.db.profile.x, addon.db.profile.y)
@@ -156,6 +164,8 @@ function addon:createUI()
       self:StopMovingOrSizing()
       self:SetMovable(false)
       self.locked = true
+      local bg_alpha = addon.db.profile.backdrop or 1.0
+      self.border:SetColorTexture(0,0,0,bg_alpha)
       self:SetScript("OnMouseDown",nil)
       self:SetScript("OnMouseUp",nil)
       self:SetScript("OnHide",nil)
@@ -168,6 +178,7 @@ function addon:createUI()
     function BarMixin:Unlock(verbose)
       self:SetMovable(true)
       self.locked = false
+      self.border:SetColorTexture(0,1,0,0.5)
       self:SetScript("OnMouseDown",function(f,button)
         if InCombatLockdown() then return end
         self:StartMoving()
@@ -241,13 +252,18 @@ function addon:createUI()
         end
       end)
     end
-
+    local bg_alpha = addon.db.profile.backdrop or 1.0
     local container = CreateFrame("Frame", "WorldMarkersClassicContainerFrame", UIParent, "SecureHandlerStateTemplate,BackdropTemplate")
     container.border=container:CreateTexture(nil,"BACKGROUND")
     container.border:SetColorTexture(0,1,0,0.5)
     container.border:SetAllPoints()
+    if addon.db.global.lock then
+      container.border:SetColorTexture(0,0,0,bg_alpha)
+    else
+      container.border:SetColorTexture(0,1,0,0.5)
+    end
     container.bg=container:CreateTexture(nil,"BORDER")
-    container.bg:SetColorTexture(0,0,0,1)
+    container.bg:SetColorTexture(0,0,0,bg_alpha)
     container.locked = false
     Mixin(container,BarMixin)
 
@@ -387,6 +403,20 @@ function addon:GetOptionTable()
     min = 0,
     max = 8,
     step = 1,
+  }
+  _p.Options.args.general.args.main.args.backdrop = {
+    type = "range",
+    name = L["Backdrop Alpha"],
+    desc = L["Set backdrop Alpha"],
+    order = 38,
+    get = function() return addon.db.profile.backdrop end,
+    set = function(info, val)
+      addon.db.profile.backdrop = tonumber(val)
+      addon:applyUI()
+    end,
+    min = 0,
+    max = 1,
+    step = 0.1,
   }
   _p.Options.args.general.args.main.args.orientation = {
     type = "select",

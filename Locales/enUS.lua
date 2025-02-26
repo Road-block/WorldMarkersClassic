@@ -19,6 +19,8 @@ L["|cffffffffClick|r to place"] = true
 L["|cffffffffRight-Click|r to remove"] = true
 L["|cffff7f00Click|r to toggle lock"] = true
 L["|cffff7f00Right Click|r to open options"] = true
+L["Backdrop Alpha"] = true
+L["Set backdrop Alpha"] = true
 L.CMD_LOCK = "Toggle Lock"
 L.CMD_RESET = "Reset Position"
 

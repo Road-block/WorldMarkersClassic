@@ -2,7 +2,7 @@
 ## Title: World Markers Classic
 ## Notes: World Marker Bar & Keybinds for Classic WoW
 ## Author: Roadblock
-## Version: 1.0.2
+## Version: 1.0.3
 ## SavedVariables: WorldMarkersClassicDB
 ## OptionalDeps: Ace3, LibDataBroker-1.1, LibDBIcon-1.0
 

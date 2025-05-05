@@ -1,4 +1,4 @@
-## Interface: 40402
+## Interface: 50500
 ## Title: World Markers Classic
 ## Notes: World Marker Bar & Keybinds for Classic WoW
 ## Author: Roadblock

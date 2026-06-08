@@ -16,5 +16,6 @@
   <Binding name="CLICK WorldMarkerClassicBindButton8:LeftButton" category="BINDING_HEADER_WORLDMARKERSCLASSIC"/>
   <Binding name="CLICK WorldMarkerClassicBindButton8:RightButton" category="BINDING_HEADER_WORLDMARKERSCLASSIC"/>
   <Binding name="CLICK WorldMarkerClassicBindButtonMulti:LeftButton" category="BINDING_HEADER_WORLDMARKERSCLASSIC"/>
+  <Binding name="CLICK WorldMarkerClassicBindButtonMulti:RightButton" category="BINDING_HEADER_WORLDMARKERSCLASSIC"/>
   <Binding name="CLICK WorldMarkerClassicBindButtonClear:LeftButton" category="BINDING_HEADER_WORLDMARKERSCLASSIC"/>
 </Bindings>

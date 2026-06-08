@@ -3,6 +3,7 @@ local L = LibStub("AceLocale-3.0"):NewLocale(addonName, "enUS", true)
 if not L then return end
   --["Term"] = true -- Example
   -- common
+L["(cursor)"] = true
 L["Hide from Minimap"] = true
 L["Button Size"] = true
 L["Border Size"] = true
@@ -15,6 +16,7 @@ L["Clear"] = true
 L["Unlocked. Drag by edge."] = true
 L["Notify a World Marker was placed"] = true
 L["Cycle World Markers"] = true
+L["Cycle World Markers(player)"] = true
 L["|cffffffffClick|r to place"] = true
 L["|cffffffffRight-Click|r to remove"] = true
 L["|cffff7f00Click|r to toggle lock"] = true

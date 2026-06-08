@@ -228,9 +228,11 @@ function addon:createUI()
       end
       local clear_id = NUM_WORLD_MARKERS+1
       self.buttons[clear_id]=CreateFrame("Button","WorldMarkerClassicButton"..clear_id, self, "SecureActionButtonTemplate,UIPanelSquareButton")
-      self.buttons[clear_id]:SetAttribute("type","worldmarker")
+      --[[self.buttons[clear_id]:SetAttribute("type","worldmarker")
       self.buttons[clear_id]:SetAttribute("action","clear")
-      self.buttons[clear_id]:SetAttribute("marker",0)
+      self.buttons[clear_id]:SetAttribute("marker",9)]]
+      self.buttons[clear_id]:SetAttribute("type","macro")
+      self.buttons[clear_id]:SetAttribute("macrotext","/cwm 0\n/cwm 9")
       self.buttons[clear_id].icon:SetVertexColor(1,0,0,0.9)
       self.buttons[clear_id]:RegisterForClicks("AnyUp","AnyDown")
       self.buttons[clear_id]:SetScript("OnEnter",function(f)
@@ -295,14 +297,18 @@ function addon:bindButtons()
     local clear_id = NUM_WORLD_MARKERS+1
     local multi_id = clear_id + 1
     bindButtons[clear_id] = CreateFrame("Button","WorldMarkerClassicBindButtonClear", UIParent, "SecureActionButtonTemplate")
-    bindButtons[clear_id]:SetAttribute("type","worldmarker")
+    --[[bindButtons[clear_id]:SetAttribute("type","worldmarker")
     bindButtons[clear_id]:SetAttribute("action","clear")
-    bindButtons[clear_id]:SetAttribute("marker",0)
+    bindButtons[clear_id]:SetAttribute("marker",0)]]
+    bindButtons[clear_id]:SetAttribute("type","macro")
+    bindButtons[clear_id]:SetAttribute("macrotext","/cwm 0\n/cwm 9")
 
     bindButtons[multi_id] = CreateFrame("Button","WorldMarkerClassicBindButtonMulti", UIParent, "SecureActionButtonTemplate")
-    bindButtons[multi_id]:SetAttribute("type","macro")
-    bindButtons[multi_id]:SetAttribute("macrotext","/wm [@cursor] 1")
-    local snippet = string.format([[id = (id or 1)%%%d+1 self:SetAttribute("macrotext","/wm [@cursor] "..id)]],NUM_WORLD_MARKERS)
+    bindButtons[multi_id]:SetAttribute("type1","macro")
+    bindButtons[multi_id]:SetAttribute("type2","macro")
+    bindButtons[multi_id]:SetAttribute("macrotext1","/wm [@cursor] 1")
+    bindButtons[multi_id]:SetAttribute("macrotext2","/wm [@player] 1")
+    local snippet = string.format([[id = (id or 1)%%%d+1 self:SetAttribute("macrotext1","/wm [@cursor] "..id);self:SetAttribute("macrotext2","/wm [@player] "..id)]],NUM_WORLD_MARKERS)
     SecureHandlerWrapScript(bindButtons[multi_id],"PostClick",bindButtons[multi_id],snippet)
   end
 end
@@ -529,6 +535,7 @@ for i=1,NUM_WORLD_MARKERS do
   _G[string.format("BINDING_NAME_CLICK WorldMarkerClassicBindButton%d:RightButton",i)] = GRAY_FONT_COLOR:WrapTextInColorCode(L["Clear"]).._G["WORLD_MARKER"..i]
 end
 _G["BINDING_NAME_CLICK WorldMarkerClassicBindButtonClear:LeftButton"] = WHITE_FONT_COLOR:WrapTextInColorCode(_G.REMOVE_WORLD_MARKERS)
-local cycle_rainbow = textRainbow(L["Cycle World Markers"])
+local cycle_rainbow = textRainbow(L["Cycle World Markers"])..WHITE_FONT_COLOR:WrapTextInColorCode(L["(cursor)"])
 _G["BINDING_NAME_CLICK WorldMarkerClassicBindButtonMulti:LeftButton"] = cycle_rainbow
+_G["BINDING_NAME_CLICK WorldMarkerClassicBindButtonMulti:RightButton"] = WHITE_FONT_COLOR:WrapTextInColorCode(L["Cycle World Markers(player)"])
 

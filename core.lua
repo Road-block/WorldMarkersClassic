@@ -302,12 +302,16 @@ function addon:bindButtons()
     bindButtons[clear_id]:SetAttribute("marker",0)]]
     bindButtons[clear_id]:SetAttribute("type","macro")
     bindButtons[clear_id]:SetAttribute("macrotext","/cwm 0\n/cwm 9")
+    bindButtons[clear_id]:SetAttribute("pressAndHoldAction", "1")
+    bindButtons[clear_id]:SetAttribute("typerelease", "macro")
 
     bindButtons[multi_id] = CreateFrame("Button","WorldMarkerClassicBindButtonMulti", UIParent, "SecureActionButtonTemplate")
     bindButtons[multi_id]:SetAttribute("type1","macro")
     bindButtons[multi_id]:SetAttribute("type2","macro")
     bindButtons[multi_id]:SetAttribute("macrotext1","/wm [@cursor] 1")
     bindButtons[multi_id]:SetAttribute("macrotext2","/wm [@player] 1")
+    bindButtons[multi_id]:SetAttribute("pressAndHoldAction", "1")
+    bindButtons[multi_id]:SetAttribute("typerelease", "macro")
     local snippet = string.format([[id = (id or 1)%%%d+1 self:SetAttribute("macrotext1","/wm [@cursor] "..id);self:SetAttribute("macrotext2","/wm [@player] "..id)]],NUM_WORLD_MARKERS)
     SecureHandlerWrapScript(bindButtons[multi_id],"PostClick",bindButtons[multi_id],snippet)
   end

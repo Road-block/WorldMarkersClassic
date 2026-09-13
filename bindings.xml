@@ -1,21 +1,21 @@
 <Bindings>
-  <Binding name="CLICK WorldMarkerClassicBindButton1:LeftButton" category="BINDING_HEADER_WORLDMARKERSCLASSIC" header="WORLDMARKERSCLASSIC"/>
-  <Binding name="CLICK WorldMarkerClassicBindButton1:RightButton" category="BINDING_HEADER_WORLDMARKERSCLASSIC"/>
-  <Binding name="CLICK WorldMarkerClassicBindButton2:LeftButton" category="BINDING_HEADER_WORLDMARKERSCLASSIC"/>
-  <Binding name="CLICK WorldMarkerClassicBindButton2:RightButton" category="BINDING_HEADER_WORLDMARKERSCLASSIC"/>
-  <Binding name="CLICK WorldMarkerClassicBindButton3:LeftButton" category="BINDING_HEADER_WORLDMARKERSCLASSIC"/>
-  <Binding name="CLICK WorldMarkerClassicBindButton3:RightButton" category="BINDING_HEADER_WORLDMARKERSCLASSIC"/>
-  <Binding name="CLICK WorldMarkerClassicBindButton4:LeftButton" category="BINDING_HEADER_WORLDMARKERSCLASSIC"/>
-  <Binding name="CLICK WorldMarkerClassicBindButton4:RightButton" category="BINDING_HEADER_WORLDMARKERSCLASSIC"/>
-  <Binding name="CLICK WorldMarkerClassicBindButton5:LeftButton" category="BINDING_HEADER_WORLDMARKERSCLASSIC"/>
-  <Binding name="CLICK WorldMarkerClassicBindButton5:RightButton" category="BINDING_HEADER_WORLDMARKERSCLASSIC"/>
-  <Binding name="CLICK WorldMarkerClassicBindButton6:LeftButton" category="BINDING_HEADER_WORLDMARKERSCLASSIC"/>
-  <Binding name="CLICK WorldMarkerClassicBindButton6:RightButton" category="BINDING_HEADER_WORLDMARKERSCLASSIC"/>
-  <Binding name="CLICK WorldMarkerClassicBindButton7:LeftButton" category="BINDING_HEADER_WORLDMARKERSCLASSIC"/>
-  <Binding name="CLICK WorldMarkerClassicBindButton7:RightButton" category="BINDING_HEADER_WORLDMARKERSCLASSIC"/>
-  <Binding name="CLICK WorldMarkerClassicBindButton8:LeftButton" category="BINDING_HEADER_WORLDMARKERSCLASSIC"/>
-  <Binding name="CLICK WorldMarkerClassicBindButton8:RightButton" category="BINDING_HEADER_WORLDMARKERSCLASSIC"/>
-  <Binding name="CLICK WorldMarkerClassicBindButtonMulti:LeftButton" category="BINDING_HEADER_WORLDMARKERSCLASSIC"/>
-  <Binding name="CLICK WorldMarkerClassicBindButtonMulti:RightButton" category="BINDING_HEADER_WORLDMARKERSCLASSIC"/>
-  <Binding name="CLICK WorldMarkerClassicBindButtonClear:LeftButton" category="BINDING_HEADER_WORLDMARKERSCLASSIC"/>
+  <Binding name="CLICK WorldMarkerClassicBindButton1:LeftButton" runOnUp="false" category="BINDING_HEADER_WORLDMARKERSCLASSIC" header="WORLDMARKERSCLASSIC"/>
+  <Binding name="CLICK WorldMarkerClassicBindButton1:RightButton" runOnUp="false" category="BINDING_HEADER_WORLDMARKERSCLASSIC"/>
+  <Binding name="CLICK WorldMarkerClassicBindButton2:LeftButton" runOnUp="false" category="BINDING_HEADER_WORLDMARKERSCLASSIC"/>
+  <Binding name="CLICK WorldMarkerClassicBindButton2:RightButton" runOnUp="false" category="BINDING_HEADER_WORLDMARKERSCLASSIC"/>
+  <Binding name="CLICK WorldMarkerClassicBindButton3:LeftButton" runOnUp="false" category="BINDING_HEADER_WORLDMARKERSCLASSIC"/>
+  <Binding name="CLICK WorldMarkerClassicBindButton3:RightButton" runOnUp="false" category="BINDING_HEADER_WORLDMARKERSCLASSIC"/>
+  <Binding name="CLICK WorldMarkerClassicBindButton4:LeftButton" runOnUp="false" category="BINDING_HEADER_WORLDMARKERSCLASSIC"/>
+  <Binding name="CLICK WorldMarkerClassicBindButton4:RightButton" runOnUp="false" category="BINDING_HEADER_WORLDMARKERSCLASSIC"/>
+  <Binding name="CLICK WorldMarkerClassicBindButton5:LeftButton" runOnUp="false" category="BINDING_HEADER_WORLDMARKERSCLASSIC"/>
+  <Binding name="CLICK WorldMarkerClassicBindButton5:RightButton" runOnUp="false" category="BINDING_HEADER_WORLDMARKERSCLASSIC"/>
+  <Binding name="CLICK WorldMarkerClassicBindButton6:LeftButton" runOnUp="false" category="BINDING_HEADER_WORLDMARKERSCLASSIC"/>
+  <Binding name="CLICK WorldMarkerClassicBindButton6:RightButton" runOnUp="false" category="BINDING_HEADER_WORLDMARKERSCLASSIC"/>
+  <Binding name="CLICK WorldMarkerClassicBindButton7:LeftButton" runOnUp="false" category="BINDING_HEADER_WORLDMARKERSCLASSIC"/>
+  <Binding name="CLICK WorldMarkerClassicBindButton7:RightButton" runOnUp="false" category="BINDING_HEADER_WORLDMARKERSCLASSIC"/>
+  <Binding name="CLICK WorldMarkerClassicBindButton8:LeftButton" runOnUp="false" category="BINDING_HEADER_WORLDMARKERSCLASSIC"/>
+  <Binding name="CLICK WorldMarkerClassicBindButton8:RightButton" runOnUp="false" category="BINDING_HEADER_WORLDMARKERSCLASSIC"/>
+  <Binding name="CLICK WorldMarkerClassicBindButtonMulti:LeftButton" runOnUp="false" category="BINDING_HEADER_WORLDMARKERSCLASSIC"/>
+  <Binding name="CLICK WorldMarkerClassicBindButtonMulti:RightButton" runOnUp="false" category="BINDING_HEADER_WORLDMARKERSCLASSIC"/>
+  <Binding name="CLICK WorldMarkerClassicBindButtonClear:LeftButton" runOnUp="false" category="BINDING_HEADER_WORLDMARKERSCLASSIC"/>
 </Bindings>
